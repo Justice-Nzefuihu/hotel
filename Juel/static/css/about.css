@@ -1,0 +1,220 @@
+.about-land{
+    padding: 6%;
+    color: white;
+    background-image: url(/img/b3.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 30vw;
+    position: relative;
+}
+.about-land h1{
+    font-size: 3rem;
+    position: absolute;
+    top: 45%;
+    
+}
+
+h3{
+    font-size: 2.2rem;
+    margin-top: 20px;
+    font-weight: 200;
+}
+
+h4{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 30px 0;
+}
+
+.about-land ul{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    opacity: 0.8;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 60%;
+}
+
+.about-land ul li a{
+    color: #7fc142;
+}
+
+.overview{
+    display: flex;
+    padding: 6%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 10%;
+    text-align: justify;
+}
+
+.overview div button{
+    margin: 10px;
+}
+
+.all-about{
+    padding: 6%;
+    text-align: justify;
+}
+
+.ab-flex{
+    display: flex;
+    gap: 7%;
+    justify-content: center;
+    text-align: left;
+    padding-bottom: 90px;
+    position: relative;
+    margin-bottom: -25px;
+}
+
+.ab-flex .m-flex{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+    position: relative;
+    flex: 1;
+}
+
+.ab-flex .m-flex::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgb(5, 25, 34);
+}
+
+.ab-flex .m-flex::after{
+    content: '';
+    background-color: rgb(5, 25, 34);
+    width: 2px;
+    height: 119%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 8px;
+    top: 42px;
+}
+
+.posts img{
+    width: 100%;
+}
+
+.posts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 6%;
+    gap: 40px;
+    background-color: white;
+}
+
+.posts div{
+    width: 100%;
+}
+
+.posts .main{
+    width: 370px;
+    height: 467px;
+    transition: all 1s ease;
+    position: relative;
+    text-align: center;
+}
+
+.posts .image{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.posts .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.4s ease;
+    height: 0;
+}
+
+.posts .main:hover .overlay{
+    height: 100%;
+}
+
+.posts .main h3{
+    color: #c7c7c7;
+    font-size: 2rem;
+    margin: 95% 0 5% 5%;
+}
+
+.posts .main p{
+    color:#c7c7c7;
+    margin-left: 5%;
+}
+
+.m-flex.last::after{
+    height: 85%;
+}
+
+@media(max-width: 992px) {
+    .about-land h1{
+        font-size: 2rem;
+    }
+
+    .about-land ul li{
+        font-size: 1.1rem;
+    }
+    
+    .overview{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .overview div{
+        /* width: 100%; */
+    }
+
+    .overview div img{
+        width: 100%;
+    }
+
+    .ab-flex{
+        flex-direction: column;
+    }
+
+    .ab-flex img{
+        width: 100%;
+    }
+
+    .ab-flex .m-flex{
+        display: none;
+    }
+
+    .posts .image{
+        height: 100%;
+    }
+
+    .posts .overlay{
+        height: 100%;
+    }
+}
+
+@media(max-width: 772px){
+    .posts{
+        flex-direction: column;
+    }
+}
+
+
+@media(max-width: 575px){
+    .overview button{
+        display: block;
+    }
+}

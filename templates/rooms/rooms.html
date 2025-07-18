@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Rooms-Juel Hotel</title>
+   <link rel="stylesheet" href="{% static '/css/header&footer.css' %}">
+   <link rel="stylesheet" href="{% static '/css/room.css' %}">
+   <link rel="stylesheet" href="{% static '/fontawesome-free-6.4.0-web/css/all.css' %}">
+</head>
+<body>
+   <div class="perloader"></div>
+   <header>
+       <div class="content flex-space">
+           <div class="logo">
+               <!-- <img src="{% static '/img/2.png" alt=""> -->
+               <h1>Juel <span>Hotel</span></h1>
+           </div>
+           <nav class="navlinks">
+               <ul id="menulist">
+                   <li><a href="{% url 'index' %}">Home</a></li>
+                   <li><a href="{% url 'about' %}">About</a></li>
+                   <li><a href="{% url 'rooms' %}"  class="active-nav">Rooms</a></li>
+                   <li><a href="{% url 'contact' %}">Contact</a></li>
+                   <li><button class="primary-btn">BOOK NOW</button></li>
+               </ul>
+               <span class="fa fa-bars" style="color: white;" onclick="menutoggle()"></span>
+           </nav>
+       </div>
+   </header>
+   <div class="top">
+       <i class="fa fa-angle-up"></i>
+   </div>
+   <main>
+       <section class="about-land" style="background-image: url({% static '/img/b1.jpg' %});">
+           <h1>Rooms</h1>
+           <ul>
+               <li><a href="{% url 'index' %}">Home</a></li>
+               <li><i class="fa fa-angle-right"></i></li>
+               <li>Rooms</li>
+           </ul>
+       </section>
+       <div class="popup" id="popup">
+           <div class="overa"></div>
+           <div class="contnt">
+               <div class="close-btn" onclick="togglePopup()">&times;</div>
+               <section class="r-abt">
+                   <div class="txt">
+                       <h3 id="rname">Single Room</h3>
+                       <div class="af">
+                           <div class="a">
+                               <div>
+                                   <h5>Bed:</h5>
+                                   <h5>Capacity:</h5>
+                                   <h5>Room Size:</h5>
+                                   <h5>View:</h5>
+                                   <h5>Recommend:</h5>
+                                   <h4>Price:</h4>
+                               </div>
+                               <div>
+                                   <p>1 bed</p>
+                                   <p>1 Adult</p>
+                                   <p>30m<sup>2</sup></p>
+                                   <p>Sunset</p>
+                                   <p>Great for relaxazation</p>
+                                   <p><span>&dollar;300</span> Per Night</p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="iimg">
+                           <div class="i">
+                               <img src="{% static '/img/sunset.jpg' %}" alt="">
+                           </div>
+                           <div class="i">
+                               <img src="{% static '/img/toilet.jpg' %}" alt="">
+                           </div>
+                       </div>
+                   </div>
+                   <div class="img">
+                       <img src="{% static '/img/g1.jpg' %}" alt="">
+                   </div>
+               </section>
+           </div>
+       </div>
+       <section class="rooms">
+           <div class="gallery">
+               <div class="r-flex">
+                {% if rooms %}
+                    {% for room in rooms %}
+                        <div class="gallery1">
+                            <div class="img">
+                                <img src="{% static '/img/room1.jpg' %}" alt="">
+                            </div>
+                            <div class="cs">
+                                <div class="flex">
+                                    <h4>Single Room</h4>
+                                    <h5>Price <span>&dollar;140</span> /Night</h5>
+                                </div>
+                                <button class="primary-btn" onclick="togglePopup('{{ room.name }}', '{{ room.price }}', '{{ room.bed }}', '{{ room.capacity}}', '{{ room.room_size }}',  '{{ room.room_view }}', '{{ room.recommend }}', '{{ room.photo_main }}', '{{ room.photo_1 }}', '{{ room.photo_2 }}')">VIEW DETAIL</button>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                
+                {% else %}
+
+                   <div class="gallery1">
+                        <h3>no rooms yet</h3>
+                   </div>
+
+                {% endif %}
+               </div>
+           </div>
+       </section>
+   </main>
+   <footer class="footer-nav">
+       <div>
+           <h2>About us</h2>
+           <p>
+               Juel Hotel and Suites is a family-owned Boutique Hotel that desires to cater and provide guests with personalized hospitality based on what they prefer.
+           </p>
+       </div>
+       <div>
+           <h2>Get in Touch</h2>
+           <p>34/8, East Hukupara, Gifirtok, Sadan.</p>
+           <p>support@juelhotel.com</p>
+           <p>+00 111 222 3333</p>
+       </div>
+       <div>
+           <h2>Pages</h2>
+           <ul>
+               <a href="{% url 'index' %}"><li><i class="fa fa-angle-right"></i>Home</li></a>
+               <a href="{% url 'about' %}"><li><i class="fa fa-angle-right"></i>About Us </li></a>
+               <a href="{% url 'rooms' %}"><li><i class="fa fa-angle-right"></i>Rooms</li></a>
+               <a href="{% url 'contact' %}"><li><i class="fa fa-angle-right"></i>Contact</li></a>
+               <a href=""><li><i class="fa fa-angle-right"></i>BOOK NOW</li></a>
+           </ul>
+       </div>
+       <div>
+           <h2>Subscribe</h2>
+           <p>Subscribe to our mailing list to get the latest updates</p>
+           <input type="email" placeholder="Email">
+           <button type="submit"><i class="fa fa-paper-plane"></i></button>
+       </div>
+   </footer>
+   <footer class="copyright">
+       <p>Copyrights © 2023 - <a href="">Juel Moria</a>, All Rights Reserved. <br> Distributed By - <a href="">Justice</a></p>
+       <div>
+           <a href=""><i class="fab fa-facebook-f"></i></a>
+           <a href=""><i class="fab fa-twitter"></i></a>
+           <a href=""><i class="fab fa-instagram"></i></a>
+           <a href=""><i class="fab fa-linkedin"></i></a>
+           <a href=""><i class="fab fa-dribbble"></i></a>
+       </div>
+   </footer>
+<script src="{% static '/Js/header.js' %}"></script>
+</body>
+</html>

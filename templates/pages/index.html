@@ -1,0 +1,363 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juel_M">
+    <meta name="description" content="This is the index page">
+    <title>Juel Hotel</title>
+    <link rel="stylesheet" href="{% static '/fontawesome-free-6.4.0-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static '/css/header&footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/index.css' %}">
+</head>
+<body>
+    <div class="perloader"></div>
+    <div class="popup1 fr" id="popup">
+        <div class="overa"></div>
+        <div class="contnt">
+            <form action="">
+                <div>
+                    <label for="">Check in:</label>
+                    <input type="Date" name="" id="">
+                </div>
+                <div>
+                    <label for="">Check out:</label>
+                    <input type="Date" name="" id="">
+                </div>
+                <div>
+                    <label for="">Email:</label>
+                    <input type="email" name="" id="">
+                </div>
+                <div>
+                    <label for="">Phone Number:</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div>
+                    <label for="">Number of Rooms:</label>
+                    <input type="number" name="" id="">
+                </div>
+                <div>
+                    <label for="">Number of Guest:</label>
+                    <input type="number" name="" id="">
+                </div>
+                <div>
+                    <button type="submit" class="primary-btn" onclick="togglePopup1()">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <header>
+        <div class="content flex-space">
+            <div class="logo">
+                <!-- <img src="{% static '/img/2.png" alt=""> -->
+                <h1>Juel <span>Hotel</span></h1>
+            </div>
+            <nav class="navlinks">
+                <ul id="menulist">
+                    <li><a href="{% url 'index' %}" class="active-nav">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'rooms' %}">Rooms</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><button class="primary-btn" onclick="togglePopup1()">BOOK NOW</button></li>
+                </ul>
+                <span class="fa fa-bars" style="color: white;" onclick="menutoggle()"></span>
+            </nav>
+        </div>
+    </header>
+    <div class="top">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <main>
+        <div class="popup2 fr" id="popup">
+            <div class="overa"></div>
+            <div class="contnt">
+                <form action="">
+                    <div>
+                        <label for="">Email:</label>
+                        <input type="email" name="" id="">
+                    </div>
+                    <div>
+                        <label for="">Phone Number:</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div>
+                        <label for="">Number of Rooms:</label>
+                        <input type="number" name="" id="">
+                    </div>
+                    <div>
+                        <label for="">Number of Guest:</label>
+                        <input type="number" name="" id="">
+                    </div>
+                    <div>
+                        <button type="submit" class="primary-btn" onclick="togglePopup2()">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <section class="landing" style="background-image: url({% static '/img/b4.jpg' %});"> 
+            <h1>DISCOVER <br> COZY ROOMS</h1>
+            <h4>PERFECT FOR ANY TRIP</h4>
+            <form action="" method="get">
+                <div class="input">
+                    <div class="input1">
+                        <input type="text" name="date" id="" placeholder="Check In" onfocus="this.type='date'" onblur="this.type='text'">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <div class="input1">
+                        <input type="text" name="date" id="" placeholder="Check In" onfocus="this.type='date'" onblur="this.type='text'">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                </div>
+                <div class="frmsu">
+                    <button class="primary-btn another-btn" onclick="togglePopup2()" >BOOK NOW</button>
+                </div>
+            </form>
+        </section>
+        <section class="relax">
+            <div class="relax-txt">
+                <h3><b>Relax at Our</b> <span>Hotel</span></h3>
+                <p class="upper">
+                    Juel Hotel and Suites is a family-owned Boutique Hotel that desires to cater and provide guests with personalized hospitality based on what they prefer.
+                </p>
+                <p class="upper">
+                    Whether the guest is looking for quiet time and lots of privacy or seeking energetic, friendly environment in the most delightful place away from home, we can provide it.
+                </p>
+                <div class="flex">
+                    <div class="rimg">
+                        <img src="{% static '/img/signature.png' %}" alt="">
+                    </div>
+                    <div>
+                        <h5 style="font-size: 1.3rem;">Juel Moria</h5>
+                        <h6 style="font-size: 1.02rem; color: #686868;">CEO, Juel Hotel</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="relax-img">
+                <img src="{% static '/img/img1.jpg' %}'" alt="">
+            </div>
+        </section>
+        <div class="popup" id="popup">
+            <div class="overa"></div>
+            <div class="contnt">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <section class="r-abt">
+                    <div class="txt">
+                        <h3 id="rname" >Single Room</h3>
+                        <div class="af">
+                            <div class="a">
+                                <div>
+                                    <h5>Bed:</h5>
+                                    <h5>Capacity:</h5>
+                                    <h5>Room Size:</h5>
+                                    <h5>View:</h5>
+                                    <h5>Recommend:</h5>
+                                    <h4>Price:</h4>
+                                </div>
+                                <div>
+                                    <h5 id="bed">1 bed</h5>
+                                    <h5 id="capacity">1 Adult</h5>
+                                    <h5><span id="rsize">30</span>m<sup>2</sup></h5>
+                                    <h5 id="rveiw">Sunset</h5>
+                                    <h5 id="recommend">Great for relaxazation</h5>
+                                    <h5><span>&dollar;</span><span id="price">300</span> Per Night</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="iimg">
+                            <div class="i">
+                                <img id="pic1" src="{% static '/img/sunset.jpg' %}"  alt="">
+                            </div>
+                            <div class="i">
+                                <img id="pic2" src="{% static '/img/toilet.jpg' %}"  alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img id="pic3" src="{% static '/img/g1.jpg' %}"  alt="">
+                    </div>
+                </section>
+            </div>
+        </div>
+        <section class="rooms">
+            <h3>Our Rooms</h3>
+            <div class="gallery">
+
+                {% if rooms %}
+
+                    {% for room in rooms %}
+
+                        <div class="gallery1">
+                            <div class="img">
+                                <img src="{{ room.photo_main.url }}"  alt="">
+                            </div>
+                            <div class="cs">
+                                <div class="flex">
+                                    <h4>{{ room.name }}</h4>
+                                    <h5>Price <span>&dollar;{{ room.price }}</span> /Night</h5>
+                                </div>
+                                <button class="primary-btn" onclick="togglePopup('{{ room.name }}', '{{ room.price }}', '{{ room.bed }}', '{{ room.capacity}}', '{{ room.room_size }}',  '{{ room.room_view }}', '{{ room.recommend }}', '{{ room.photo_main }}', '{{ room.photo_1 }}', '{{ room.photo_2 }}')">VIEW DETAIL</button>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                {% else %}
+
+                    <div class="gallery" style="text-align: center;">
+                        <h3>no rooms yet..</h3>
+                    </div>
+                
+                {% endif %}
+               
+            </div>
+            <a href="{% url 'rooms' %}">
+                <button class="primary-btn r-btn">VIEW ALL ROOMS</button>
+            </a>
+        </section>
+        <section class="gallery-section">
+            <h3>Gallery</h3>
+            <div class="gallery-flex">
+                <div class="main">
+                    <img src="{% static '/img/gallery17.jpg' %}"  alt="" class="image">
+                    <div class="overlay">
+                        <h3>friendly Atmosphere</h3>
+                        <p>Everything for a Great Stay</p>
+                    </div>
+                </div>
+                <div class="main">
+                    <img src="{% static '/img/gallery11.jpg' %}"  alt="" class="image">
+                    <div class="overlay">
+                        <h3>Hotel Venues</h3>
+                        <p>Perfect for Any Events</p>
+                    </div>
+                </div>
+                <div class="main">
+                    <img src="{% static '/img/gallery12.jpg' %}"  alt="" class="image">
+                    <div class="overlay">
+                        <h3>Services</h3>
+                        <p>We have the best room services</p>
+                    </div>
+                </div>
+                <div class="main">
+                    <img src="{% static '/img/gallery18.jpg' %}"  alt="" class="image">
+                    <div class="overlay">
+                        <h3>Pool & Span</h3>
+                        <p>Health & Relaxation</p>
+                    </div>
+                </div>
+                <div class="main">
+                    <img src="{% static '/img/gallery14.jpg' %}"  alt="" class="image">
+                    <div class="overlay">
+                        <h3>Comfortable Rooms</h3>
+                        <p>Experience the True Hospitality</p>
+                    </div>
+                </div>
+                <div class="main">
+                    <img src="{% static '/img/gallery15.jpg' %}"  alt="" class="image">
+                    <div class="overlay">
+                        <h3>Toilet Interior</h3>
+                        <p>Unique Toilet Appearance</p>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <!-- <section class="news">
+            <h3>Latest News</h3>
+            <div class="gallery news-flex">
+                <div class="gallery1">
+                    <div class="img">
+                        <img src="{% static '/img//newimg1.jpg' %}"  alt="">
+                    </div>
+                    <h4>6 Tips to Book the Best Hotel for You</h4>
+                    <div class="flex">
+                        <p>by Mike Barnes</p>
+                        <p><time datetime="2023">Apr 25, 2023 at 3:13 pm</time></p>
+                        <p>News</p>
+                    </div>
+                    <p>Travelers today are spoiled for choice when it comes to booking a hotel. Booking the best hotel goes beyond just booking the cheapest, or the most centrally located. Here's how to...</p>
+                </div>
+                <div class="gallery1">
+                    <div class="img">
+                        <img src="{% static '/img/newimg2.jpg' %}"  alt="">
+                    </div>
+                    <h4>Hotel Safety Tips You Should Not Ignore</h4>
+                    <div class="flex">
+                        <p>By Ella Nwa</p>
+                        <p><time datetime="2023">March 30, 2023 at 11:13 am</time></p>
+                    </div>
+                    <p>These days, travel is no Sunday picnic and when you finally stumble into the lobby of your hotel, you may be tired, dirty, and in a hurry to get cleaned up, get some sleep, or get to the first...</p>
+                </div>
+            </div>
+            <button class="primary-btn r-btn">READ MORE</button>
+        </section> -->
+        <section class="customer">
+            <h3 style="text-align: center;">Right Services <b>for Greater Customers</b></h3>
+            <div class="c-flex">
+                <div>
+                    <i class="fa fa-person-swimming"></i>
+                    <h4>Swimming Pool</h4>
+                    <p>One of the main attractions at the hotel is our extensive, luxurious 20-metre indoor swimming pool.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-wifi"></i>
+                    <h4>Free Wi-Fi</h4>
+                    <p>We provide our guests with free high-speed Wi-Fi connection throughout the whole hotel area.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-utensils"></i>
+                    <h4>Restaurants</h4>
+                    <p>Restaurants at Juel Hotel offer a vast choice of great dishes that can satisfy even the most exquisite tastes.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-person-biking"></i>
+                    <h4>Bike Rentals</h4>
+                    <p>Our hotel also offers bike rental services to our guests and visitors. We provide bikes at very affordable prices.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-nav">
+        <div>
+            <h2>About us</h2>
+            <p>
+                Juel Hotel and Suites is a family-owned Boutique Hotel that desires to cater and provide guests with personalized hospitality based on what they prefer.
+            </p>
+        </div>
+        <div>
+            <h2>Get in Touch</h2>
+            <p>34/8, East Hukupara, Gifirtok, Sadan.</p>
+            <p>support@juelhotel.com</p>
+            <p>+00 111 222 3333</p>
+        </div>
+        <div>
+            <h2>Pages</h2>
+            <ul>
+                <a href="{% url 'index' %}"><li><i class="fa fa-angle-right"></i>Home</li></a>
+                <a href="{% url 'about' %}"><li><i class="fa fa-angle-right"></i>About Us </li></a>
+                <a href="{% url 'rooms' %}"><li><i class="fa fa-angle-right"></i>Rooms</li></a>
+                <a href="{% url 'contact' %}"><li><i class="fa fa-angle-right"></i>Contact</li></a>
+                <a href=""><li><i class="fa fa-angle-right"></i>BOOK NOW</li></a>
+            </ul>
+        </div>
+        <div>
+            <h2>Subscribe</h2>
+            <p>Subscribe to our mailing list to get the latest updates</p>
+            <input type="email" placeholder="Email">
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+        </div>
+    </footer>
+    <footer class="copyright">
+        <p>Copyrights © 2023 - <a href="">Juel Moria</a>, All Rights Reserved. <br> Distributed By - <a href="">Justice</a></p>
+        <div>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+            <a href=""><i class="fab fa-dribbble"></i></a>
+        </div>
+    </footer>
+<script src="{% static '/Js/header.js' %}"></script>
+</body>
+</html>

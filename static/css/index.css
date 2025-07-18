@@ -1,0 +1,472 @@
+.landing{
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center center;
+    height: 80vh;
+    padding:10% 6% 0;
+}
+
+.landing input{
+    position: relative;
+    padding:15px;
+    width: 100%;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+.landing .input .input1{
+    width: 60%;
+}
+
+.landing .input .input1{
+    position: relative;
+
+}
+
+.landing i{
+    position: absolute;
+    right: 10.5%;
+    top: 32%;
+    color: #7fc142;
+}
+
+.landing form,.landing .input {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing h1{
+    font-size: 3rem;
+    margin: 10px 0 20px;
+    line-height: 4.5rem;
+}
+
+.landing h4{
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.relax .flex{
+    margin-top: 50px;
+}
+
+.relax{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10%;
+    background-color: white;
+    padding: 6%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.relax h3{
+    font-size: 2.5rem;
+    margin-bottom: 45px;
+    line-height: 4rem;
+}
+
+.relax p{
+    margin: 20px 0;
+}
+
+.rooms, .news{
+    padding: 6%;
+    text-align: center;
+}
+
+.rooms h3{
+    font-size: 2.5rem;
+    text-shadow: 5px 5px 10px rgb(120, 119, 119);
+    margin-bottom: 45px;
+    font-weight: 200;
+}
+
+.gallery{
+    display: flex;
+    flex: 1;
+    gap: 45px;
+    align-items: center;
+}
+
+.gallery1, .popup{
+    width: 100%;
+    position: relative;
+}
+
+.gallery1 .img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 8px rgb(120, 119, 119)
+}
+
+.gallery1:hover, .r-btn:hover, .gallery1:hover .cs{
+    box-shadow: 3px 3px 25px rgb(120, 119, 119);
+    height: 100%;
+}
+
+.gallery1:hover{
+    transform: scale(1.1);
+
+}
+
+.gallery1 img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery1 .flex{
+    gap: 40px;
+    justify-content: center;
+    margin: 25% 0 20px;
+}
+
+.gallery1 h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #c7c7c7;
+}
+
+.gallery1 h5{
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: #c7c7c7;
+}
+
+.gallery1 .cs{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0%;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: all 0.8s ease;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+}
+
+.r-btn{
+    margin-top: 60px;
+    width: 30%;
+    box-shadow: 2px 2px 8px rgb(120, 119, 119);
+}
+
+.gallery-section{
+    text-align: center;
+    padding: 6%;
+    background-color: white;
+}
+
+.gallery-section h3{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 200;
+}
+
+.gallery-section .gallery-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-flex .main{
+    width: 370px;
+    height: 467px;
+    transition: all 1s ease;
+    position: relative;
+    text-align: left;
+}
+
+.gallery-section .image{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.gallery-section .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.4s ease;
+    height: 0;
+}
+
+.gallery-section .main:hover .overlay{
+    height: 100%;
+}
+
+.gallery-section .main h3{
+    color: #c7c7c7;
+    font-size: 2rem;
+    margin: 95% 0 5% 5%;
+}
+
+.gallery-section .main p{
+    color:#c7c7c7;
+    margin-left: 5%;
+}
+
+.customer{
+    padding: 6%;
+}
+
+.customer .c-flex div i{
+    color: #7fc142;
+    font-size: 2rem;
+}
+
+.customer h3{
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    line-height: 2.5rem;
+}
+
+.customer h4{
+    font-size: 1.5rem;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.customer .c-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+.customer .c-flex div{
+    width: 100%;
+}
+
+.r-abt{
+    background-color: white;
+    padding: 6%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex: 1;
+    gap: 20px;
+}
+
+.r-abt .iimg{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.r-abt .iimg i{
+    width: 100%;
+}
+
+.r-abt .af .a{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    gap: 20%;
+}
+
+.r-abt .af .a div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.r-abt img{
+    width: 100%;
+}
+
+.txt h3{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.txt .af{
+    margin: 40px 0;
+}
+
+.popup.active .overa, .popup1.active .overa, .popup2.active .overa{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup .contnt{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 0%) scale(0);
+    z-index: 2;
+}
+
+.popup1 .contnt, .popup2 .contnt{
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    transform: translate(50%, 0%) scale(0);
+    z-index: 3;
+}
+
+.popup2 .contnt{
+    z-index: 34;
+}
+
+.popup .close-btn{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 2.5rem;
+}
+
+.popup.active .overa, .popup1.active .overa, .popup2.active .overa{
+    display: block;
+}
+
+.popup.active .contnt, .popup1.active .contnt, .popup2.active .contnt{
+    transition: all 0.4s ease;
+    transform: translate(50%, 0%) scale(1);
+}
+
+@media(max-width: 992px) {
+    .landing{
+        height: 50vh;
+    }
+
+    .landing h1{
+        font-size: 2.5rem;
+        margin-top: 20%;
+        line-height: 100%;
+    }
+    
+    .landing h4{
+        font-size: 1.1rem;
+        margin: 2% 0;
+    }
+    
+
+    .landing form{
+        display: block;
+    }
+
+    .landing .frmsub{
+        width: 81%;
+        margin-left: 10%;
+    }
+
+    .landing button{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .flex, .relax{
+        flex-direction: column;
+        align-items:normal;
+        gap: 2px;
+    }
+
+    .relax-img img{
+        width: 100%;
+    }
+
+    .relax{
+        gap: 50px;
+    }
+
+    .gallery{
+        flex-direction: column;
+    }
+
+    .gallery1 .cs{
+        height: 100%;
+    }
+
+    .gallery-flex div, .gallery-flex img{
+        width: 300px;
+        height: 300px;
+        transition: all 1s ease;
+    }
+
+    .customer .c-flex{
+        flex-wrap: wrap;
+    }
+
+    /* .gallery-section img{
+        height: 100%;
+    } */
+
+    .gallery-section .overlay{
+        height: 100%;
+    }
+}
+
+@media(max-width: 575px) {
+    .landing .input{
+        display: block;
+    }
+
+    .landing{
+        height: 50vh;
+    }
+
+    .landing .input .input1:last-child{
+        margin-top: 20px;
+    }
+
+    .landing .input .input1{
+        width: 100%;  
+    }
+    
+    .r-btn{
+        width: 80%;
+    }
+
+    .landing .frmsub{
+        width: 100%;
+    }
+
+    /* .gallery-flex div{
+        di
+        margin-bottom: 20px;
+    }
+
+    .gallery-section  */
+
+    .gallery-flex img{
+        width: 100%;
+    }
+
+    /* .customer .c-flex1{
+        flex-direction: column;
+    } */
+
+    .r-abt{
+        display: none;
+    }
+}

@@ -1,0 +1,177 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-Juel Hotel</title>
+    <link rel="stylesheet" href="{% static '/fontawesome-free-6.4.0-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static '/css/header&footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/about.css' %}">
+</head>
+<body>
+    <div class="perloader"></div>
+    <header>
+        <div class="content flex-space">
+            <div class="logo">
+                <!-- <img src="/img/2.png" alt=""> -->
+                <h1>Juel <span>Hotel</span></h1>
+            </div>
+            <nav class="navlinks">
+                <ul id="menulist">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="active-nav">About</a></li>
+                    <li><a href="{% url 'rooms' %}">Rooms</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><button class="primary-btn">BOOK NOW</button></li>
+                </ul>
+                <span class="fa fa-bars" style="color: white;" onclick="menutoggle()"></span>
+            </nav>
+        </div>
+    </header>
+    <div class="top">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <main>
+        <section class="about-land" style="background-image: url({% static '/img/b3.jpg' %});"> 
+            <h1>About Us</h1>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li>About Us</li>
+            </ul>
+        </section>
+        <section class="overview">
+            <div>
+                <h3>Overview</h3>
+                <h4>Juel Hotel provides the best accommodation and relaxation for guests from all over the world.</h4>
+                <p>“We do our best to make the hotel the perfect place for you. Here, we always make sure that you will have any of your needs satisfied, be it a comfortable hotel room with a strong WiFi signal and a diligent room service…”</p>
+                <button class="primary-btn">VIEW OUR HISTORY</button>
+                <button class="secondary-btn">CONTACT US</button>
+            </div>
+            <div>
+                <img src="{% static '/img/about1.jpg' %}" alt="">
+            </div>
+        </section>
+        <section class="all-about">
+            <div class="ab-flex">
+                <div class="img">
+                    <img src="{% static '/img/about2.jpg' %}" alt="">
+                </div>
+                <div class="m-flex"></div>
+                <div class="txt">
+                    <h3>Accommodation</h3>
+                    <h4>We Offer Lots of Great Accommodation Options Designed to Provide the Best Level of Comfort</h4>
+                    <p>
+                        Stay in sustainable style, discover custom-designed furnishings, commissioned art and innovative design in every corner of our hotel. Savor fresh European flavors with creekside dining and an energetic bar with craft cocktails. Unwind in modern loft-like guestrooms.
+                    </p>
+                </div>
+            </div>
+            <div class="ab-flex">
+                <div class="img">
+                    <img src="{% static '/img/about3.jpg' %}" alt="">
+                </div>
+                <div class="m-flex"></div>
+                <div class="txt">
+                    <h3>Restaurant</h3>
+                    <h4>“Aurora”, the Restaurant Located at our Hotel Offers an Amazingly Varied Menu to Our Customers.</h4>
+                    <p>
+                        At Juel hotel you are getting premier service and beautiful rooms with many additional services and optionscididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam   . We do our best to make the hotel the perfect place.
+                    </p>
+                </div>
+            </div>
+            <div class="ab-flex">
+                <div class="img">
+                    <img src="{% static '/img/about4.jpg'%}" alt="">
+                </div>
+                <div class="m-flex"></div>
+                <div class="txt">
+                    <h3>Swimming Pool</h3>
+                    <h4>You Can Also Relax and Spend Your Time with Benefit at the Swimming Pool at Our Hotel.</h4>
+                    <p>
+                        One of the main attractions at the hotel is our extensive, luxurious 20-metre indoor swimming pool. Savor fresh European flavors with creekside dining and an energetic bar with craft cocktails. Unwind in modern pool.
+                    </p>
+                </div>
+            </div>
+            <div class="ab-flex">
+                <div class="img">
+                    <img src="{% static '/img/about5.jpg' %}" alt="" style="margin-bottom: 0%;">
+                </div>
+                <div class="m-flex last"></div>
+                <div class="txt">
+                    <h3>Great Staff</h3>
+                    <h4>Lux Hotel Employs the Best People in the Industry - From Waiters to Receptionists</h4>
+                    <p>
+                        One of the main attractions at the hotel is our extensive, luxurious 20-metre indoor swimming pool. Savor fresh European flavors with creekside dining and an energetic bar with craft cocktails. Unwind in modern pool.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="posts">
+            <div class="main">
+                <img src="{% static '/img/abt1.jpg'%}" alt="" class="image">
+                <div class="overlay">
+                    <h3>Harold Barnett</h3>
+                    <p>General Manager</p>
+                </div>
+            </div>
+            <div class="main">
+                <img src="{% static '/img/abt2.jpg'%}" alt="" class="image">
+                <div class="overlay">
+                    <h3>Dreama Leos</h3>
+                    <p>Risk Manager</p>
+                </div>
+            </div>
+            <div class="main">
+                <img src="{% static '/img/abt3.jpg'%}" alt="" class="image">
+                <div class="overlay">
+                    <h3>Ann Johnson</h3>
+                    <p>Legal Officer</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-nav">
+        <div>
+            <h2>About us</h2>
+            <p>
+                Juel Hotel and Suites is a family-owned Boutique Hotel that desires to cater and provide guests with personalized hospitality based on what they prefer.
+            </p>
+        </div>
+        <div>
+            <h2>Get in Touch</h2>
+            <p>34/8, East Hukupara, Gifirtok, Sadan.</p>
+            <p>support@juelhotel.com</p>
+            <p>+00 111 222 3333</p>
+        </div>
+        <div>
+            <h2>Pages</h2>
+            <ul>
+                <a href="{% url 'index' %}"><li><i class="fa fa-angle-right"></i>Home</li></a>
+                <a href="{% url 'about' %}"><li><i class="fa fa-angle-right"></i>About Us </li></a>
+                <a href="{% url 'rooms' %}"><li><i class="fa fa-angle-right"></i>Rooms</li></a>
+                <a href="{% url 'contact' %}"><li><i class="fa fa-angle-right"></i>Contact</li></a>
+                <a href=""><li><i class="fa fa-angle-right"></i>BOOK NOW</li></a>
+            </ul>
+        </div>
+        <div>
+            <h2>Subscribe</h2>
+            <p>Subscribe to our mailing list to get the latest updates</p>
+            <input type="email" placeholder="Email">
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+        </div>
+    </footer>
+    <footer class="copyright">
+        <p>Copyrights © 2023 - <a href="">Juel Moria</a>, All Rights Reserved. <br> Distributed By - <a href="">Justice</a></p>
+        <div>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+            <a href=""><i class="fab fa-dribbble"></i></a>
+        </div>
+    </footer>
+    <script src="{% static '/Js/header.js' %}"></script>
+</body>
+</html>

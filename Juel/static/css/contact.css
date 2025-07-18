@@ -1,0 +1,155 @@
+.about-land{
+    padding: 6%;
+    color: white;
+    background-image: url(/img/b2.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 30vw;
+    position: relative;
+}
+.about-land h1{
+    font-size: 3rem;
+    position: absolute;
+    top: 45%;
+    
+}
+
+.about-land ul{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    opacity: 0.8;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 60%;
+}
+
+.about-land ul li a{
+    color: #7fc142;
+}
+
+.c-flex{
+    display: flex;
+    justify-content: center;
+    padding: 6%;
+    background-color: white;
+    gap: 5%;
+    flex: 1;
+}
+
+.map legend{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.ca-flex{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    gap: 20px;
+}
+
+.ca-flex i{
+    color: #7fc142;
+    font-size: 2rem;
+}
+
+.cew{
+    border-left: 1px solid  rgb(5, 25, 34);
+    border-right: 1px solid  rgb(5, 25, 34);
+    padding: 0 5%;
+}
+
+.map{
+    padding: 6%;
+    text-align: center;
+}
+
+.map fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 50%;
+    margin: auto;
+}
+
+.e-flex{
+    font-size: 0.8rem;
+    opacity: 0.8;
+    display: flex;
+    align-items:center;
+    gap: 6%;
+    margin-top: 10px;
+    flex: 1;
+    width: 100%;
+}
+
+.e-flex p{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1px;
+    width: 100%;
+}
+
+.e-flex input, .e-flex textarea{
+    border-radius: 0.4rem;
+    padding:10px 18.5px;
+    border: 1px solid rgb(18, 86, 121);
+    width: 100%;
+}
+
+.r-btn{
+    margin-top: 30px;
+    width: 20%;
+}
+
+@media(max-width: 772px){
+    .about-land h1{
+        font-size: 2rem;
+    }
+
+    .about-land ul li{
+        font-size: 1.1rem;
+    }
+
+    .c-flex{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cew{
+        border: none
+    }
+
+    .cew::after, .cew::before{
+        content: '';
+        width: 80%;
+        height: 1px;
+        background-color: rgb(5, 25, 34);
+    }
+
+    .e-flex{
+        display: block;
+        width: 100%;
+    }
+
+    .r-btn{
+        width: 60%;
+    }
+
+    .e-flex p{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .map fieldset{
+        width: 100%;
+    }
+}
